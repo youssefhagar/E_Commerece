@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>2dfcacd8-2e2c-439e-9b0d-82dc1bb1a740</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\E_Commerece_Application\E_Commerece.Application.csproj" />
+    <ProjectReference Include="..\E_Commerece_Infrastructure\E_Commerece.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.29" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.29" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Files\Images\Products\CasualSneakers.jpg" />
+    <None Include="wwwroot\Files\Images\Products\ClassicBlackDressPants.jpg" />
+    <None Include="wwwroot\Files\Images\Products\ClassicWhiteTShirt.jpeg" />
+    <None Include="wwwroot\Files\Images\Products\CottonHoodie.jpg" />
+    <None Include="wwwroot\Files\Images\Products\DenimJacket.jpg" />
+    <None Include="wwwroot\Files\Images\Products\FormalBlazer.jpg" />
+    <None Include="wwwroot\Files\Images\Products\KnittedSweater.jpg" />
+    <None Include="wwwroot\Files\Images\Products\MensLeatherJacket.jpg" />
+    <None Include="wwwroot\Files\Images\Products\MensPoloShirt.jpg" />
+    <None Include="wwwroot\Files\Images\Products\SlimFitJeans.jpg" />
+    <None Include="wwwroot\Files\Images\Products\SummerFloralDress.jpg" />
+    <None Include="wwwroot\Files\Images\Products\WomensTrenchCoat.jpeg" />
+    <None Include="wwwroot\Files\Images\Products\WoolScarf.jpg" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Include="Files\**\*">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>Always</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+
+</Project>
